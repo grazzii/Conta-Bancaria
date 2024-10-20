@@ -8,31 +8,38 @@ public class Main {
         System.out.println("Qual seu nome?");
         String nome = sc.nextLine(); 
 
-        Consulta consulta = new Consulta();
-        consulta.setNome(nome); //serve para passar o nome capturado no Main para o objeto consulta, que é uma instância da classe Consulta.
+        Operadores operador = new Operadores();
+        operador.setNome(nome); //serve para passar o nome capturado no Main para o objeto operadores.
 
+        int operacao = 0;
+        while (operacao != 4) {
         System.out.println();
         System.out.println("-------Menu--------");
         System.out.println("1-Consultar conta");
         System.out.println("2-Depósito");
         System.out.println("3-Sacar");
         System.out.println("4-Sair");
+        
 
-        int operacao = sc.nextInt();
-
+        operacao = sc.nextInt();
+        
 
         if (operacao == 1) {
-            consulta.consultarConta(); 
+            operador.consultarConta(); 
         }
 
         if (operacao == 2){
-            consulta.depositar();
+            operador.depositar();
+        }
+
+        if (operacao == 3){
+            operador.sacar();
         }
 
         if (operacao == 4) {
             System.out.println("Saindo...");
         }
-
+        }
         sc.close();
     }
 }

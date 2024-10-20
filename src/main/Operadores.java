@@ -1,15 +1,17 @@
 import java.util.Scanner;
 
-public class Consulta {
-    private int valoremconta = 0;  // Valor atual na conta
-    private String nome;  // Nome do usuário
+public class Operadores {
+    private int valoremconta = 0;
+    private int valorsacado; 
+    private int valorfinal;
+    private String nome;  //
 
-    // Método para definir o nome
+
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    // Método para consultar a conta
+
     public void consultarConta() {
         System.out.println("Consultando conta bancária...");
         System.out.println("Nome: " + nome);  
@@ -30,8 +32,19 @@ public class Consulta {
             System.out.println("Valor inválido para depósito.");
         }
     }
+    public void sacar(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Valor a sacar: ");
+        valorsacado = sc.nextInt();
+            if(valorsacado >= valoremconta) {
+                System.out.println("Valor indisponível");
+            }
+            else {
+                System.out.println("Saque concluído para o valor: " + valorsacado + ".");
+                int valorfinal = valoremconta - valorsacado;
+                valoremconta = valorfinal;
+            }
 
-
-    
+    }
 }
 
