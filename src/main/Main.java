@@ -9,12 +9,12 @@ public class Main {
         String nome = sc.nextLine(); 
 
         Operadores operador = new Operadores();
-        operador.setNome(nome); //serve para passar o nome capturado no Main para o objeto operadores.
+        operador.setNome(nome); //serve para passar o nome capturado aqui na Main para o objeto operadores.
 
         int operacao = 0;
         while (operacao != 4) {
         System.out.println();
-        System.out.println("-------Menu--------");
+        System.out.println("-------Itaú--------");
         System.out.println("1-Consultar conta");
         System.out.println("2-Depósito");
         System.out.println("3-Sacar");

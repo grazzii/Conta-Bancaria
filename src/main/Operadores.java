@@ -4,10 +4,10 @@ public class Operadores {
     private int valoremconta = 0;
     private int valorsacado; 
     private int valorfinal;
-    private String nome;  //
+    private String nome;  
 
 
-    public void setNome(String nome) {
+    public void setNome(String nome) { //
         this.nome = nome;
     }
 
@@ -43,6 +43,7 @@ public class Operadores {
                 System.out.println("Saque concluído para o valor: " + valorsacado + ".");
                 int valorfinal = valoremconta - valorsacado;
                 valoremconta = valorfinal;
+                System.out.println("Valor final: " + valorfinal);
             }
 
     }
